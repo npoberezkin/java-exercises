@@ -1,0 +1,8 @@
+determine the maximum profit that could have been made
+by buying and then selling a single share over a given
+day range, subject to constraint that the buy and sell
+have to take place at the start of the day.
+
+1) ask about input format - three arrays Mins, Maxs, Currents
+
+we can consider only Currents, because of the constraint in the description
