@@ -1,4 +1,4 @@
-package patterns.factory;
+package patterns.factory.domain;
 
 public abstract class Plan {
 

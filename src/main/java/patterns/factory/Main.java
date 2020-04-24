@@ -2,6 +2,7 @@ package patterns.factory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import patterns.factory.domain.Plan;
 
 import static patterns.factory.PlanFactory.PlanType.*;
 

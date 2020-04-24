@@ -1,5 +1,10 @@
 package patterns.factory;
 
+import patterns.factory.domain.Plan;
+import patterns.factory.domain.impl.CommercialPlan;
+import patterns.factory.domain.impl.DomesticPlan;
+import patterns.factory.domain.impl.InstitutionalPlan;
+
 import static patterns.factory.PlanFactory.PlanType.values;
 
 public class PlanFactory {
