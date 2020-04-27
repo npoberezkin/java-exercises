@@ -1,4 +1,4 @@
-package patterns.creational.builder;
+package patterns.creational.builder.insideclass;
 
 import java.util.Objects;
 
@@ -33,7 +33,7 @@ public class MyPizza extends Pizza {
     @Override
     public String toString() {
         return super.toString() +
-                "patterns.creational.builder.MyPizza{" +
+                "patterns.creational.builder.inside.MyPizza{" +
                 "size=" + size +
                 '}';
     }

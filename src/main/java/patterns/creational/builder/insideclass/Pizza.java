@@ -1,4 +1,4 @@
-package patterns.creational.builder;
+package patterns.creational.builder.insideclass;
 
 import java.util.EnumSet;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public abstract class Pizza {
 
     @Override
     public String toString() {
-        return "patterns.creational.builder.Pizza{" +
+        return "patterns.creational.builder.inside.Pizza{" +
                 "toppings=" + toppings +
                 '}';
     }
