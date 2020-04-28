@@ -29,7 +29,7 @@ public abstract class Pizza {
 
     @Override
     public String toString() {
-        return "patterns.creational.builder.inside.Pizza{" +
+        return "Pizza{" +
                 "toppings=" + toppings +
                 '}';
     }

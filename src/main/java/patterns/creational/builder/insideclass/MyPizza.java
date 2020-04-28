@@ -25,7 +25,7 @@ public class MyPizza extends Pizza {
         }
     }
 
-    public MyPizza(Builder builder) {
+    private MyPizza(Builder builder) {
         super(builder);
         size = builder.size;
     }
@@ -33,7 +33,7 @@ public class MyPizza extends Pizza {
     @Override
     public String toString() {
         return super.toString() +
-                "patterns.creational.builder.inside.MyPizza{" +
+                "MyPizza{" +
                 "size=" + size +
                 '}';
     }
