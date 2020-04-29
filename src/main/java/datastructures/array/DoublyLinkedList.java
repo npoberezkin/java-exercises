@@ -5,7 +5,7 @@ import java.util.Iterator;
 public class DoublyLinkedList<T> implements Iterable<T> {
 
     int size = 0;
-    Node<T> head, tail;
+    Node<T> head, tail = null;
 
     public DoublyLinkedList() {
     }
