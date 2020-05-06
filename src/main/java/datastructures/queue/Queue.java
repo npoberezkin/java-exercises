@@ -16,6 +16,9 @@ public class Queue<T> implements Iterable<T> {
     }
 
     public T remove() {
+        if (isEmpty()) {
+            throw new RuntimeException();
+        }
         return elements.remove();
     }
 
