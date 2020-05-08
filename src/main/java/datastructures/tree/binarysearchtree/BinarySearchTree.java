@@ -7,7 +7,9 @@
  */
 package datastructures.tree.binarysearchtree;
 
+import java.util.ArrayDeque;
 import java.util.Iterator;
+import java.util.Queue;
 import java.util.Stack;
 
 public class BinarySearchTree<T extends Comparable<T>> {
@@ -73,7 +75,62 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     private Node remove(Node node, T elem) {
-        return null; // TODO
+
+        if (node == null) return null;
+
+        int cmp = elem.compareTo(node.data);
+
+        // dig into left subtree
+        if (cmp < 0) {
+            node.left = remove(node.left, elem);
+        }
+
+        // dig into right subtree
+        else if (cmp > 0) {
+            node.right = remove(node.right, elem);
+        }
+
+        // remove element in 4 different cases: no children, only left/right, both
+        else {
+
+            // only right or no subtree
+            if (node.left == null) {
+                Node right = node.right;
+
+                node.data = null;
+                node.right = null;
+                node.left = null;
+
+                return right;
+            }
+
+            // only left or no subtree
+            else if (node.right == null) {
+                Node left = node.left;
+
+                node.data = null;
+                node.right = null;
+                node.left = null;
+
+                return left;
+            }
+
+            // both subtrees
+            else {
+                // Find the leftmost node in the right subtree
+                Node minRight = minRight(node.right);
+
+                // Swap the data
+                node.data = minRight.data;
+
+                // Go into the right subtree and remove the leftmost node we
+                // found and swapped data with. This prevents us from having
+                // two nodes in our tree with the same value.
+                remove(node.right, minRight.data);
+            }
+        }
+
+        return node;
     }
 
     // returns true is the element exists in the tree
@@ -101,6 +158,14 @@ public class BinarySearchTree<T extends Comparable<T>> {
         else return true;
     }
 
+    // Searching min in right subtree
+    private Node minRight(Node node) {
+        while (node.left != null) {
+            node = node.left;
+        }
+        return node;
+    }
+
     // This method returns an iterator for a given TreeTraversalOrder.
     // The ways in which you can traverse the tree are in four different ways:
     // preorder, inorder, postorder and levelorder.
@@ -113,7 +178,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             case POST_ORDER:
                 return null;
             case LEVEL_ORDER:
-                return null;
+                return levelOrderTraversal();
             default:
                 return null;
         }
@@ -121,7 +186,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     private Iterator<T> inOrderTraversal() {
 
-        final Stack<Node> stack = new java.util.Stack<>();
+        Stack<Node> stack = new Stack<>();
         stack.push(root);
 
         return new Iterator<T>() {
@@ -150,6 +215,36 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 }
 
                 return node.data;
+            }
+        };
+    }
+
+    private Iterator<T> levelOrderTraversal() {
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.offer(root);
+
+        return new Iterator<T>() {
+            Node trav;
+
+            @Override
+            public boolean hasNext() {
+                return !queue.isEmpty();
+            }
+
+            @Override
+            public T next() {
+                trav = queue.poll();
+
+                if (trav != null) {
+                    if (trav.left != null) {
+                        queue.offer(trav.left);
+                    }
+                    if (trav.right != null) {
+                        queue.offer(trav.right);
+                    }
+                }
+
+                return trav.data;
             }
         };
     }
