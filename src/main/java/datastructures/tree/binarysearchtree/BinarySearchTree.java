@@ -172,16 +172,46 @@ public class BinarySearchTree<T extends Comparable<T>> {
     public Iterator<T> traverse(TreeTraversalOrder order) {
         switch (order) {
             case PRE_ORDER:
-                return null;
+                return preOrderTraversal();
             case IN_ORDER:
                 return inOrderTraversal();
             case POST_ORDER:
-                return null;
+                return postOrderTraversal();
             case LEVEL_ORDER:
                 return levelOrderTraversal();
             default:
                 return null;
         }
+    }
+
+    private Iterator<T> preOrderTraversal() {
+
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+
+        return new Iterator<T>() {
+            Node trav = root;
+
+            @Override
+            public boolean hasNext() {
+                return root != null && !stack.isEmpty();
+            }
+
+            @Override
+            public T next() {
+
+                Node node = stack.pop();
+
+                if (node.right != null) {
+                    stack.push(node.right);
+                }
+                if (node.left != null) {
+                    stack.push(node.left);
+                }
+
+                return node.data;
+            }
+        };
     }
 
     private Iterator<T> inOrderTraversal() {
@@ -215,6 +245,37 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 }
 
                 return node.data;
+            }
+        };
+    }
+
+    // Returns as iterator to traverse the tree in post order
+    private java.util.Iterator<T> postOrderTraversal() {
+        Stack<Node> stack1 = new Stack<>();
+        Stack<Node> stack2 = new Stack<>();
+        stack1.push(root);
+        while (!stack1.isEmpty()) {
+            Node node = stack1.pop();
+            if (node != null) {
+                stack2.push(node);
+                if (node.left != null) stack1.push(node.left);
+                if (node.right != null) stack1.push(node.right);
+            }
+        }
+        return new java.util.Iterator<T>() {
+            @Override
+            public boolean hasNext() {
+                return root != null && !stack2.isEmpty();
+            }
+
+            @Override
+            public T next() {
+                return stack2.pop().data;
+            }
+
+            @Override
+            public void remove() {
+                throw new UnsupportedOperationException();
             }
         };
     }

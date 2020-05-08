@@ -22,16 +22,30 @@ public class BinarySearchTreeTest {
 
 
         System.out.println("level iteration");
-        Iterator<Integer> lelevIterator = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
-        while (lelevIterator.hasNext()) {
-            System.out.print(lelevIterator.next() +  " ");
+        Iterator<Integer> lvlIterator = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
+        while (lvlIterator.hasNext()) {
+            System.out.print(lvlIterator.next() + " ");
         }
 
         System.out.println();
         System.out.println("in order iteration");
-        Iterator<Integer> inIterator1 = tree.traverse(TreeTraversalOrder.IN_ORDER);
-        while (inIterator1.hasNext()) {
-            System.out.print(inIterator1.next() +  " ");
+        Iterator<Integer> inIterator = tree.traverse(TreeTraversalOrder.IN_ORDER);
+        while (inIterator.hasNext()) {
+            System.out.print(inIterator.next() + " ");
+        }
+
+        System.out.println();
+        System.out.println("pre order iteration");
+        Iterator<Integer> preIterator = tree.traverse(TreeTraversalOrder.PRE_ORDER);
+        while (preIterator.hasNext()) {
+            System.out.print(preIterator.next() + " ");
+        }
+
+        System.out.println();
+        System.out.println("post order iteration");
+        Iterator<Integer> postIterator = tree.traverse(TreeTraversalOrder.POST_ORDER);
+        while (postIterator.hasNext()) {
+            System.out.print(postIterator.next() + " ");
         }
 
         System.out.println();
@@ -39,30 +53,30 @@ public class BinarySearchTreeTest {
 
         System.out.println();
         System.out.println("removing 15: " + tree.remove(15));
-        Iterator<Integer> inIterator2 = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
-        while (inIterator2.hasNext()) {
-            System.out.print(inIterator2.next() +  " ");
+        Iterator<Integer> lvlIterator2 = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
+        while (lvlIterator2.hasNext()) {
+            System.out.print(lvlIterator2.next() + " ");
         }
 
         System.out.println();
         System.out.println("removing 8: " + tree.remove(8));
-        Iterator<Integer> inIterator3 = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
-        while (inIterator3.hasNext()) {
-            System.out.print(inIterator3.next() +  " ");
+        Iterator<Integer> lvlIterator3 = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
+        while (lvlIterator3.hasNext()) {
+            System.out.print(lvlIterator3.next() + " ");
         }
 
         System.out.println();
         System.out.println("removing 1: " + tree.remove(1));
-        Iterator<Integer> inIterator4 = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
-        while (inIterator4.hasNext()) {
-            System.out.print(inIterator4.next() +  " ");
+        Iterator<Integer> lvlIterator4 = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
+        while (lvlIterator4.hasNext()) {
+            System.out.print(lvlIterator4.next() + " ");
         }
 
         System.out.println();
         System.out.println("removing 5: " + tree.remove(5));
-        Iterator<Integer> inIterator5 = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
-        while (inIterator5.hasNext()) {
-            System.out.print(inIterator5.next() +  " ");
+        Iterator<Integer> lvlIterator5 = tree.traverse(TreeTraversalOrder.LEVEL_ORDER);
+        while (lvlIterator5.hasNext()) {
+            System.out.print(lvlIterator5.next() + " ");
         }
     }
 }
