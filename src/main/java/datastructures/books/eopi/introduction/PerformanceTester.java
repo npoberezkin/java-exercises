@@ -1,11 +1,11 @@
-package datastructures.eopi.introduction;
+package datastructures.books.eopi.introduction;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-import static datastructures.eopi.introduction.MaxProfitFinder.*;
+import static datastructures.books.eopi.introduction.MaxProfitFinder.*;
 import static util.RandomDataGen.getRandomLongsList;
 
 public class PerformanceTester {

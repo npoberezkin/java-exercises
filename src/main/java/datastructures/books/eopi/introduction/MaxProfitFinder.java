@@ -1,4 +1,4 @@
-package datastructures.eopi.introduction;
+package datastructures.books.eopi.introduction;
 
 import java.util.ArrayList;
 import java.util.Arrays;

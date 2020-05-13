@@ -1,4 +1,4 @@
-package datastructures.eopi.introduction;
+package datastructures.books.eopi.introduction;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static datastructures.eopi.introduction.MaxProfitFinder.findMaxProfitByMinSoFar;
+import static datastructures.books.eopi.introduction.MaxProfitFinder.findMaxProfitByMinSoFar;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ByMinSoFarTest {

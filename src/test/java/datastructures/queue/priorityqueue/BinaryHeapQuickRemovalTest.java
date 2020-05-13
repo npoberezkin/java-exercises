@@ -1,4 +1,4 @@
-package datastructures.priorityqueue;
+package datastructures.queue.priorityqueue;
 
 import org.junit.jupiter.api.Test;
 
