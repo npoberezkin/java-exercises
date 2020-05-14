@@ -1,6 +1,6 @@
-package datastructures.queue.bfs;
+package datastructures.queue.exercise.bfs;
 
-import datastructures.queue.bfs.Tree.Node;
+import datastructures.queue.exercise.bfs.Tree.Node;
 
 import java.util.LinkedList;
 

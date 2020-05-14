@@ -1,4 +1,4 @@
-package datastructures.queue.bfs;
+package datastructures.queue.exercise.bfs;
 
 import java.util.ArrayList;
 import java.util.List;
