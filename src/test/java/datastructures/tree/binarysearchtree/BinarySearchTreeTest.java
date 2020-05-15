@@ -1,5 +1,7 @@
 package datastructures.tree.binarysearchtree;
 
+import datastructures.tree.BinarySearchTree;
+import datastructures.tree.TreeTraversalOrder;
 import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;

@@ -5,7 +5,9 @@
  * are provided including: 1) Preorder traversal 2) Inorder traversal 3) Postorder traversal 4)
  * Levelorder traversal
  */
-package datastructures.tree.binarysearchtree;
+package datastructures.tree;
+
+import datastructures.tree.TreeTraversalOrder;
 
 import java.util.ArrayDeque;
 import java.util.Iterator;
