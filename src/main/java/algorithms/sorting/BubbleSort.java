@@ -21,7 +21,7 @@ public class BubbleSort {
     }
 
     private static void sort2(int[] arr) {
-        boolean swapped = false;
+        boolean swapped = true;
         for (int i = 0; swapped && i < arr.length; i++) {
             System.out.println("iteration " + (i + 1));
             swapped = false;
@@ -44,7 +44,7 @@ public class BubbleSort {
 
         int[] arr2 = new int[]{6, 1, 2, 3, 4, 6, 4};
         System.out.println(Arrays.toString(arr2));
-        sort1(arr2);
+        sort2(arr2);
         System.out.println(Arrays.toString(arr2));
     }
 }
