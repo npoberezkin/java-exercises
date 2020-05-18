@@ -1,4 +1,4 @@
-package datastructures.tree;
+package datastructures.graph.tree;
 
 public enum TreeTraversalOrder {
     PRE_ORDER, IN_ORDER, POST_ORDER, LEVEL_ORDER;

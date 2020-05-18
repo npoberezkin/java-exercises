@@ -4,7 +4,7 @@
  *
  * @author William Fiset, william.alexandre.fiset@gmail.com
  */
-package datastructures.tree.balancedtree;
+package datastructures.graph.tree.balancedtree;
 
 import static datastructures.utils.TreePrinter.PrintableNode;
 import static datastructures.utils.TreePrinter.getTreeDisplay;
