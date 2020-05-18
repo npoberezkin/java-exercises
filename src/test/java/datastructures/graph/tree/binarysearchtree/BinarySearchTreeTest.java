@@ -1,7 +1,7 @@
-package datastructures.tree.binarysearchtree;
+package datastructures.graph.tree.binarysearchtree;
 
-import datastructures.tree.BinarySearchTree;
-import datastructures.tree.TreeTraversalOrder;
+import datastructures.graph.tree.BinarySearchTree;
+import datastructures.graph.tree.TreeTraversalOrder;
 import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
