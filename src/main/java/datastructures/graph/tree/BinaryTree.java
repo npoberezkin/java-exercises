@@ -175,6 +175,26 @@ public class BinaryTree {
         };
     }
 
+    private boolean isBST(Node root, Node prev, boolean isLeft) {
+        if (root == null) {
+            return true;
+        }
+        if (!isBST(root.left, root, true)) {
+            return false;
+        }
+        if (isLeft && root.data > prev.data) {
+            return false;
+        }
+        if (!isLeft && root.data < prev.data) {
+            return false;
+        }
+        return isBST(root.right, root, false);
+    }
+
+    public boolean isBST() {
+        return isBST(root, root, true);
+    }
+
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
         tree.add(5);
