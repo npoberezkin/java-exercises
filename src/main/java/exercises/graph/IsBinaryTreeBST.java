@@ -1,4 +1,4 @@
-package exercises;
+package exercises.graph;
 
 import datastructures.graph.tree.BinaryTree;
 
