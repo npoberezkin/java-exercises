@@ -1,4 +1,4 @@
-package interview.concurrency.threads;
+package concurrency.threads;
 
 /**
  * You have thread T1, T2, and T3, how will you ensure that thread T2 run after T1 and thread T3 run after T2?
